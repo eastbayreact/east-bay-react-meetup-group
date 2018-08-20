@@ -21,7 +21,7 @@
     "no-constant-condition": "warn",
     "no-unused-vars": "warn",
     "quotes": ["error", "backtick", { "allowTemplateLiterals": true }],
-    "react/destructuring-assignment": ["enabled", "never"],
+    "react/destructuring-assignment": 0,
     "react/forbid-prop-types": ["enabled", "never"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-uses-vars": [2],
