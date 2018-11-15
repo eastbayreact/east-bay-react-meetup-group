@@ -15,11 +15,7 @@ export default function App() {
         <img src={logo} className="logo" alt="logo" />
         {isWindowLandscape && <Nav />}
       </div>
-      <main className="app--content">
-        {shouldShowMainContent && (
-          <Home shouldShowNav={shouldShowMainContent} />
-        )}
-      </main>
+      <main className="app--content">{shouldShowMainContent && <Home />}</main>
     </div>
   )
 }

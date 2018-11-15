@@ -22,7 +22,6 @@ export default function Home() {
               </a>
             </span>
           )}
-          {/* <span className="small">next meetup is november 18</span> */}
         </h1>
       </div>
     </div>
