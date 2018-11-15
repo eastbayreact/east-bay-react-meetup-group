@@ -1,0 +1,93 @@
+.logo {
+  animation: logo-spin infinite 20s linear;
+}
+
+[class^='app--splash__'] {
+  transition: 1s $x-bezier-decel;
+
+  @media screen and (orientation: portrait) {
+    transition: 0.75s $x-bezier-decel;
+  }
+}
+
+.app {
+  display: flex;
+
+  &--splash {
+    &__active {
+      flex-basis: 100vw;
+
+      .app--content {
+        flex-basis: 0vw;
+
+        * {
+          display: none;
+        }
+      }
+
+      .app--header {
+        .logo {
+          top: calc(50vh - 150px / 2);
+        }
+      }
+    }
+
+    &__inactive {
+      flex-basis: 15vw;
+
+      @media screen and (orientation: portrait) {
+        flex-basis: 0vw;
+      }
+
+      .app--content {
+        flex-basis: 85vw;
+      }
+
+      * {
+        display: block;
+      }
+
+      .app--header {
+        .logo {
+          top: 5%;
+          @media screen and (orientation: portrait) {
+            width: 0px;
+            height: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  &--header {
+    position: relative;
+    display: flex;
+    background-color: #282c34;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+
+    .logo {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: calc(50vh - 150px / 2);
+      transition: 0.85s $x-bezier-bounce;
+    }
+  }
+
+  &--link {
+    color: #61dafb;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
