@@ -1,0 +1,51 @@
+.nav {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+
+  ul {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.5rem;
+    list-style-type: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: lowercase;
+    transition: 0.5s ease-in-out 0.25s;
+    width: 100%;
+
+    @media screen and (orientation: portrait) {
+      opacity: 1;
+      width: 100vw;
+      transition: 0.5s ease-in-out 0.25s;
+    }
+
+    li {
+      background-color: $c-blue;
+      padding: 0.5rem 0 0.75rem;
+      &:hover {
+        animation: broken-hinge 1s forwards $x-bezier-decel;
+        cursor: pointer;
+      }
+    }
+
+    .menu--location {
+      background-color: $c-red;
+      color: #fcfcfc;
+      font-style: italic;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    animation: 1.25s fade-in-on-load forwards ease;
+  }
+
+  a {
+    text-decoration: none;
+    color: $c-light;
+  }
+}

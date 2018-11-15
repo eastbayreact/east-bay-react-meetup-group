@@ -3,31 +3,46 @@
 }
 
 [class^='app--splash__'] {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: $c-dark;
+  align-items: center;
   transition: 1s $x-bezier-decel;
+  z-index: 10;
 
   @media screen and (orientation: portrait) {
     transition: 0.75s $x-bezier-decel;
   }
 }
 
+.logo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: calc(50vh - 150px / 2);
+  transition: 0.85s $x-bezier-bounce;
+}
+
 .app {
   display: flex;
+  position: relative;
+
+  &--content {
+    background-color: $c-light;
+    flex-basis: 0vw;
+    transition: 0.75s $x-bezier-decel;
+  }
 
   &--splash {
     &__active {
       flex-basis: 100vw;
 
-      .app--content {
+      ~ .app--content {
         flex-basis: 0vw;
 
         * {
           display: none;
-        }
-      }
-
-      .app--header {
-        .logo {
-          top: calc(50vh - 150px / 2);
         }
       }
     }
@@ -39,55 +54,37 @@
         flex-basis: 0vw;
       }
 
-      .app--content {
+      ~ .app--content {
         flex-basis: 85vw;
-      }
+        width: 85vw;
+        height: 100vh;
 
-      * {
-        display: block;
-      }
+        @media screen and (orientation: portrait) {
+          flex-basis: 100vw;
+          width: 100vw;
+          height: 100vh;
+        }
 
-      .app--header {
-        .logo {
-          top: 5%;
-          @media screen and (orientation: portrait) {
-            width: 0px;
-            height: 0px;
-          }
+        * {
+          display: auto;
         }
       }
-    }
-  }
 
-  &--header {
-    position: relative;
-    display: flex;
-    background-color: #282c34;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+      .logo {
+        top: 5%;
+        @media screen and (orientation: portrait) {
+          width: 0px;
+          height: 0px;
+        }
+      }
 
-    .logo {
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      top: calc(50vh - 150px / 2);
-      transition: 0.85s $x-bezier-bounce;
+      nav > ul {
+        opacity: 1;
+      }
     }
   }
 
   &--link {
     color: #61dafb;
-  }
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

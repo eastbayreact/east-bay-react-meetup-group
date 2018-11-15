@@ -1,0 +1,28 @@
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes broken-hinge {
+  67% {
+    transform: rotate(-2.5deg);
+  }
+
+  100% {
+    transform: rotate(-1.25deg);
+  }
+}
+
+@keyframes fade-in-on-load {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
