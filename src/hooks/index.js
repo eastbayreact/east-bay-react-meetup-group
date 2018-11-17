@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { useState, useEffect } from 'react'
+import { useState, useReducer, useEffect } from 'react'
 
 export function useWindowOrientation() {
   const [isWindowLandscape, setIsWindowLandscape] = useState(true)
@@ -15,4 +15,23 @@ export function useWindowOrientation() {
   })
 
   return isWindowLandscape
+}
+
+export function useSlidesReducer({
+  initialState,
+  activeClassName,
+  inactiveClassName
+}) {
+  const slideReducer = (state, action) => {
+    switch (action.type) {
+      case `activate`:
+        return activeClassName
+      case `deactivate`:
+        return inactiveClassName
+      default:
+        return state
+    }
+  }
+
+  return useReducer(slideReducer, initialState)
 }

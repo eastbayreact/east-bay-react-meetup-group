@@ -1,0 +1,44 @@
+[class^='splash__'] {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: $c-dark;
+  align-items: center;
+  transition: 1s $x-bezier-decel;
+  z-index: 10;
+
+  @media screen and (orientation: portrait) {
+    transition: 0.75s $x-bezier-decel;
+  }
+}
+
+.splash {
+  &__active {
+    flex-basis: 100vw;
+
+    ~ .app--content {
+      flex-basis: 0vw;
+    }
+  }
+
+  &__inactive {
+    flex-basis: 15vw;
+
+    @media screen and (orientation: portrait) {
+      flex-basis: 0vw;
+    }
+
+    .logo {
+      top: 5%;
+
+      @media screen and (orientation: portrait) {
+        width: 0px;
+        height: 0px;
+      }
+    }
+
+    nav > ul {
+      opacity: 1;
+    }
+  }
+}

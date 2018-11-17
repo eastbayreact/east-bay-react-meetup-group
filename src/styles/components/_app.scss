@@ -2,20 +2,6 @@
   animation: logo-spin infinite 20s linear;
 }
 
-[class^='app--splash__'] {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  background-color: $c-dark;
-  align-items: center;
-  transition: 1s $x-bezier-decel;
-  z-index: 10;
-
-  @media screen and (orientation: portrait) {
-    transition: 0.75s $x-bezier-decel;
-  }
-}
-
 .logo {
   position: absolute;
   width: 150px;
@@ -27,62 +13,12 @@
 .app {
   display: flex;
   position: relative;
+  width: 200vw;
 
   &--content {
     background-color: $c-light;
     flex-basis: 0vw;
     transition: 0.75s $x-bezier-decel;
-  }
-
-  &--splash {
-    &__active {
-      flex-basis: 100vw;
-
-      ~ .app--content {
-        flex-basis: 0vw;
-
-        * {
-          display: none;
-        }
-      }
-    }
-
-    &__inactive {
-      flex-basis: 15vw;
-
-      @media screen and (orientation: portrait) {
-        flex-basis: 0vw;
-      }
-
-      ~ .app--content {
-        flex-basis: 85vw;
-        width: 85vw;
-        height: 100vh;
-
-        @media screen and (orientation: portrait) {
-          flex-basis: 100vw;
-          width: 100vw;
-          height: 100vh;
-        }
-
-        * {
-          display: auto;
-        }
-      }
-
-      .logo {
-        top: 5%;
-
-        @media screen and (orientation: portrait) {
-          width: 0px;
-          height: 0px;
-        }
-      }
-
-      nav > ul {
-        opacity: 1;
-      }
-    }
   }
 
   &--link {
