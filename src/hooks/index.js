@@ -12,7 +12,7 @@ export function useWindowOrientation() {
     return () => {
       window.removeEventListener(`resize`, handleResize)
     }
-  })
+  }, [])
 
   return isWindowLandscape
 }
