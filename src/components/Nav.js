@@ -15,7 +15,7 @@ export default function Nav() {
 
         {!isWindowLandscape && (
           <>
-            <li>next meetup is on nov. 18</li>
+            <li>next meetup is on jan. 17</li>
             <li>
               <a
                 href="https://www.meetup.com/East-Bay-React-Meetup-Group/"
