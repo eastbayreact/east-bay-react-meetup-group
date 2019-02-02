@@ -51,6 +51,8 @@
 
 <a id="orgde9d8d1"></a>
 
+---
+
 **[STORY]** *I'm not intimidated by excessive frameworks. I know that React isn't the only way to build things, and that's okay.*
 
 ###  What is React?
@@ -62,6 +64,9 @@ React is just one way to use JavaScript. For some of us, we choose to use React 
 For some, React may not be their first choice, because another framework like Vue or Angular does those two things for them better than React does&#x2013;that's perfectly fine. At the end of the day, we want to build apps and websites, and we should choose the system that works best for us.
 
 <a id="org0ccc198"></a>
+
+---
+
 
 **[STORY]** *I'm not intimidated by developer jargon.*
 
@@ -180,6 +185,9 @@ In every React component, `props` is just an object that is passed in to the com
 ###  Lifecycle
 
 <a id="org53f16c3"></a>
+
+---
+
 
 **[STORY]** *I know that "React" and "vanilla JavaScript" are two skills that go hand-in-hand.*
 
