@@ -47,11 +47,11 @@
 
 <a id="org16b49ec"></a>
 
-## EPIC Make React transparent.
+## [EPIC] Make React transparent.
 
 <a id="orgde9d8d1"></a>
 
-### STORY I'm not intimidated by excessive frameworks. I know that React isn't the only way to build things, and that's okay.
+### [STORY] I'm not intimidated by excessive frameworks. I know that React isn't the only way to build things, and that's okay.
 
 1.  What is React?
 
@@ -63,7 +63,7 @@
 
 <a id="org0ccc198"></a>
 
-### STORY I'm not intimidated by developer jargon.
+### [STORY] I'm not intimidated by developer jargon.
 
 1.  Side note: JSX
 
@@ -167,7 +167,7 @@
 
 <a id="org53f16c3"></a>
 
-### STORY I know that "React" and "vanilla JavaScript" are two skills that go hand-in-hand.
+### [STORY] I know that "React" and "vanilla JavaScript" are two skills that go hand-in-hand.
 
 1.  Events
 
@@ -175,6 +175,6 @@
 
 <a id="org05b889f"></a>
 
-### STORY I can start up a React project without hesitation.
+### [STORY] I can start up a React project without hesitation.
 
 1.  TODO Writing our first app
